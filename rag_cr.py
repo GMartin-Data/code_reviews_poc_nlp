@@ -54,9 +54,15 @@ Question: {question}
 """
 
 # LLM
+import os
+
 from langchain_openai import AzureChatOpenAI
 
-llm = AzureChatOpenAI(model="gpt-3.5-turbo", temperature=0)
+llm = AzureChatOpenAI(
+    azure_deployment = os.getenv("DEPLOYMENT_NAME_LLM"),
+    openai_api_version = "2023-06-01-preview",
+    model_version= "0301",
+)
 
 
 ## STRUCTURE OUTPUT
