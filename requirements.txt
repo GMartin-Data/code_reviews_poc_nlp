@@ -1,0 +1,14 @@
+langchain
+langchain-chroma
+langchain-community
+langchain-experimental
+langchain-openai
+langgraph
+langserve[all]
+langsmith
+python-dotenv
+pytube<16
+rich<14
+tavily-python
+tiktoken
+youtube-transcript-api
