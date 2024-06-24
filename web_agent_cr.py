@@ -74,7 +74,7 @@ class Agent:
         graph_builder.set_entry_point("llm")
         self.graph = graph_builder.compile(checkpointer=checkpointer)
         ## Convenience mapping for tools
-        self.tools = {tool.name for tool in tools}
+        self.tools = {tool.name: tool for tool in tools}
         ## Bind tools to the model
         self.model = model.bind_tools(tools)
     
