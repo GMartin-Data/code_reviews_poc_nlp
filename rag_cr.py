@@ -16,7 +16,7 @@ from langchain_community.document_loaders import YoutubeLoader
 YOUTUBE_URL = "https://www.youtube.com/watch?v=cdiD-9MMpb0"
 
 transcript_loader = YoutubeLoader.from_youtube_url(YOUTUBE_URL)
-transcription = [transcript_loader.load()[0]]
+transcription = transcript_loader.load()
 
 
 # SPLIT
